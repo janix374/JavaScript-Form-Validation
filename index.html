@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JavaScript Form Validation</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Sing Up</h1>
+    <div class="row">
+            <form class="col s6" id="myform" novalidate>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label for="firstName">First Name</label>
+                        <input
+                                type="text"
+                                name="First Name"
+                                class="validate"
+                                id="firstName"
+                                onfocusout="validateFirstName()"
+                        >
+                        <span class="helper-text"></span>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <label for="lastName">Last Name</label>
+                        <input
+                                id="lastName"
+                                type="text"
+                                class="validate"
+                                name="Last Name"
+                                onfocusout="validationLastName()"
+                        >
+                        <span class="helper-text"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" class="validate" name="Password" onfocusout="validationPassword()">
+                        <span class="helper-text"></span>
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="confirmPassword">Confirme Password</label>
+                        <input id="confirmPassword" type="password" class="validate" name="Confirm Password" onfocusout="validationConfirmPassword()">
+                        <span class="helper-text"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" class="validate" name="Email" onfocusout="validationEmail()">
+                        <span class="helper-text"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="gender">
+                        <p> Your Gender:</p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="gender" type="radio" value="male" />
+                                <span>male</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="gender" type="radio" value="female"  />
+                                <span>female</span>
+                            </label>
+                        </p>
+                    </div>
+                    <span class="helper-text"></span>
+                </div>
+
+                <div class="row">
+                    <label>Browser Select</label>
+                    <select class="browser-default" id="option">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+
+
+                <button class="btn waves-effect waves-light" type="submit">Submit</button>
+            </form>
+        <div class="col s6 submitData">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="validation.js"></script>
+</body>
+</html>
